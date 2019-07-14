@@ -1,12 +1,15 @@
 import * as Types from './types';
 import axios from '../../lib/axios';
 
-export const getContentList = () => {
+export const getContentList = page => {
   return dispatch => {
-    axios.get('/nearbyMerchants').then(response => {
+    let params = {};
+    params.page = page;
+    axios.get('/nearbyMerchants', { params }).then(response => {
       dispatch({
         type: Types.CONTENT_LIST_DATA,
-        payload: response.data.data.poilist
+        payload: response.data.data.poilist,
+        page
       });
     });
   };

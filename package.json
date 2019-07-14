@@ -18,8 +18,10 @@
     "react-redux": "^7.1.0",
     "react-router-dom": "^5.0.1",
     "redux": "^4.0.4",
+    "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-    "sass": "^1.22.4"
+    "sass": "^1.22.4",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
     "@babel/core": "7.4.3",

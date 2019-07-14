@@ -2,50 +2,50 @@
 
 .search-bar {
   width: 100%;
-  height: pm2rem(40px);
+  height: px2rem(40px);
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: pm2rem(14px);
+  padding-top: px2rem(14px);
 
   .bar-location {
-    margin-right: pm2rem(20px);
-    border-radius: pm2rem(13px);
+    margin-right: px2rem(20px);
+    border-radius: px2rem(13px);
     background-color: rgba(0, 0, 0, 0.33);
-    height: pm2rem(28px);
-    width: pm2rem(92px);
+    height: px2rem(28px);
+    width: px2rem(92px);
   }
 
   .location-icon {
     display: inline-block;
     background-image: url('./img/locationIcon.png');
     background-size: cover;
-    width: pm2rem(15px);
-    height: pm2rem(20px);
-    vertical-align: pm2rem(8px);
-    margin-left: pm2rem(6px);
+    width: px2rem(15px);
+    height: px2rem(20px);
+    vertical-align: px2rem(8px);
+    margin-left: px2rem(6px);
   }
 
   .location-text {
     position: relative;
     display: inline-block;
-    font-size: pm2rem(14px);
+    font-size: px2rem(14px);
     color: #fff;
-    vertical-align: pm2rem(12px);
-    margin-left: pm2rem(8px);
-    margin-right: pm2rem(9px);
+    vertical-align: px2rem(12px);
+    margin-left: px2rem(8px);
+    margin-right: px2rem(9px);
 
     &:after {
       content: '';
       display: block;
       position: absolute;
-      width: pm2rem(14px);
-      height: pm2rem(14px);
+      width: px2rem(14px);
+      height: px2rem(14px);
       background-image: url('./img/arrowIcon.png');
       background-size: cover;
-      right: pm2rem(-15px);
-      top: pm2rem(-1px);
+      right: px2rem(-15px);
+      top: px2rem(-1px);
     }
   }
 
@@ -54,6 +54,7 @@
     height: px2rem(30px);
     background: #fff;
     border-radius: 20px;
+    position: relative;
 
     &:before {
       content: '';
@@ -64,7 +65,7 @@
       background-image: url('./img/searchIcon.png');
       background-size: cover;
       top: px2rem(7px);
-      left: px2rem(10px);
+      left: px2rem(14px);
     }
   }
 
@@ -72,7 +73,7 @@
     color: #a9a9a9;
     height: 100%;
     line-height: px2rem(30px);
-    margin-left: px2rem(12px);
-    font-size: pm2rem(14px);
+    margin-left: px2rem(30px);
+    font-size: px2rem(14px);
   }
 }

@@ -6,15 +6,23 @@ const defaultState = {
 
 export default (state = defaultState, action) => {
   switch (action.type) {
-    case Types.CONTENT_LIST_DATA:
+  case Types.CONTENT_LIST_DATA:
+    if (Number(action.page) === 0) {
       return {
         ...state,
         contentList: action.payload
       };
-    default:
+    } else {
+      let contentList = state.contentList;
       return {
-        ...state
+        ...state,
+        contentList: contentList.concat(action.payload)
       };
+    }
+  default:
+    return {
+      ...state
+    };
   }
 };
 

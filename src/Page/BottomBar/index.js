@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { changeTab } from '../../store/tab/actions';
+import { changeTab } from 'store/tab/actions';
 import './index.scss';
 
 class BottomBar extends Component {

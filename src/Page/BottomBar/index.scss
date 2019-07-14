@@ -4,22 +4,22 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: pm2rem(60px);
+  height: px2rem(60px);
   display: flex;
-  border-top: pm2rem(1px) solid #b6b6b6;
+  border-top: px2rem(1px) solid #b6b6b6;
   background-color: rgba(246, 246, 246, .95);
   .btn-item {
     flex: 1;
-    font-size: pm2rem(14px);
+    font-size: px2rem(14px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: #999;
     .tab-icon {
-      margin-bottom: pm2rem(4px);
-      width: pm2rem(26px);
-      height: pm2rem(26px);
+      margin-bottom: px2rem(4px);
+      width: px2rem(26px);
+      height: px2rem(26px);
       background-size: cover;
     }
     &.active {

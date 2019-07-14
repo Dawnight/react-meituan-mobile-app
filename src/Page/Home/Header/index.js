@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SearchBar from '../SearchBar';
-import bannerBg from '../../../static/img/banner-bg.jpg';
+import bannerBg from 'src/static/img/banner-bg.jpg';
 
 import './index.scss';
 

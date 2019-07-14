@@ -5,16 +5,16 @@
   .category-item {
     float: left;
     width: 25%;
-    padding-top: pm2rem(14px);
-    font-size: pm2rem(14px);
+    padding-top: px2rem(14px);
+    font-size: px2rem(14px);
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   .item-icon {
-    width: pm2rem(48px);
+    width: px2rem(48px);
   }
   .item-name {
-    margin-top: pm2rem(14px);
+    margin-top: px2rem(14px);
   }
 }

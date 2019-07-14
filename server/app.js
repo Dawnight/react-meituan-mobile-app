@@ -1,4 +1,5 @@
 const express = require('express');
+const uuid = require('uuid');
 
 const app = express();
 const PORT = 3001;
@@ -29,9 +30,16 @@ app.get('/api/nearbyMerchants', (req, res) => {
   };
   page = Number(page);
   if (page === 1) {
-    resData.data.poilist = Header.data.poilist.slice(0, PER);
+    resData.data.poilist = Header.data.poilist.slice(0, PER).map(item => {
+      item.id = uuid();
+      return item;
+    });
   } else {
-    resData.data.poilist = Header.data.poilist.slice((page - 1) * PER, page * PER);
+
+    resData.data.poilist = Header.data.poilist.slice((page - 1) * PER, page * PER).map(item => {
+      item.id = uuid();
+      return item;
+    });
   }
   res.json(resData);
 });
