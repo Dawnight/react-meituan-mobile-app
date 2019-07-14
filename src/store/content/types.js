@@ -1,0 +1,1 @@
+export const CONTENT_LIST_DATA = 'CONTENT_LIST_DATA';

@@ -1,0 +1,9 @@
+@import "../../../components/common";
+
+.header {
+  position: relative;
+  .banner-img {
+    width: 100%;
+    height: pm2rem(178px);
+  }
+}
