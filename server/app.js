@@ -45,8 +45,23 @@ app.get('/api/nearbyMerchants', (req, res) => {
 });
 
 app.get('/api/orderList', (req, res) => {
-  const Order = require('./data/Order.json');
-  res.json(Order);
+  let page = req.query.page || 1;
+  const PER = 6;
+  let Order = require('./data/Order.json');
+  let digestlist = Order.data.digestlist;
+  page = Number(page);
+  if (page === 1) {
+    digestlist = digestlist.slice(0, PER).map(item => {
+      item.order_id = item.order_id + '' + uuid();
+      return item;
+    });
+  } else {
+    digestlist = digestlist.slice((page - 1) * PER, page * PER).map(item => {
+      item.order_id = item.order_id + '' + uuid();
+      return item;
+    });
+  }
+  res.json(digestlist);
 });
 
 app.listen(PORT, err => {

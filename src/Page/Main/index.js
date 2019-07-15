@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 
-import Home from '../Home';
+// import Home from '../Home';
+import Order from '../Order';
 import BottomBar from '../BottomBar';
 
 class Main extends Component {
   render() {
     return (
       <div>
-        <Home/>
+        {/*<Home/>*/}
+        <Order/>
         <BottomBar/>
       </div>
     );
