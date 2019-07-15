@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 // import Home from '../Home';
-import Order from '../Order';
+// import Order from '../Order';
+import My from '../My';
 import BottomBar from '../BottomBar';
 
 class Main extends Component {
@@ -9,7 +10,8 @@ class Main extends Component {
     return (
       <div>
         {/*<Home/>*/}
-        <Order/>
+        {/*<Order/>*/}
+        <My/>
         <BottomBar/>
       </div>
     );
