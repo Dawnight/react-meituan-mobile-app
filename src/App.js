@@ -1,13 +1,14 @@
 import React from 'react';
 import Main from './Page/Main';
-import store from './store';
-import { Provider } from 'react-redux';
+
+import history from './store/history';
+import { ConnectedRouter } from 'connected-react-router';
+
 function App() {
   return (
-    <Provider store={store}>
+    <ConnectedRouter history={history}>
       <Main/>
-    </Provider>
-
+    </ConnectedRouter>
   );
 }
 

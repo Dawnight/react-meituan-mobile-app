@@ -1,10 +1,13 @@
 import { combineReducers } from 'redux';
+import { connectRouter } from 'connected-react-router';
+
 import tab from './tab/reducer';
 import category from './category/reducer';
 import content from './content/reducer';
 import order from './order/reducer';
 
-export default combineReducers({
+export default history => combineReducers({
+  router: connectRouter(history),
   tab,
   category,
   content,

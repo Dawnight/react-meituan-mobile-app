@@ -3,7 +3,13 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './static/reset.css';
 
-ReactDOM.render(<App/>, document.getElementById('root'));
+import store from './store';
+import { Provider } from 'react-redux';
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App/>
+  </Provider>, document.getElementById('root'));
 
 (function () {
   window.onload = function () {
@@ -17,4 +23,3 @@ ReactDOM.render(<App/>, document.getElementById('root'));
     window.addEventListener('resize', setRemUnit);
   };
 })();
-
