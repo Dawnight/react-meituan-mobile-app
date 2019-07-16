@@ -1,0 +1,1 @@
+export const CHANGE_TAB = 'HEADER/CHANGE_TAB';

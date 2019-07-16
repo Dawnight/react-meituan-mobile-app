@@ -1,4 +1,3 @@
-import * as Types from './types';
 import { TABKEY } from '../../config';
 
 const defaultState = {
