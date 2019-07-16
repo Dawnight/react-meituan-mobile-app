@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { changeTab } from 'store/tab/actions';
+import { NavLink, withRouter } from 'react-router-dom';
+
 import './index.scss';
 
 class BottomBar extends Component {
 
   changeTab (item) {
-    this.props.changeTab({
-      activeKey: item.key
-    });
+    this.props.history.push(item.key);
   };
 
   renderItem = () => {
@@ -16,16 +15,15 @@ class BottomBar extends Component {
     return tabs.map((item, index) => {
       let cls = item.key + ' btn-item';
       let name = item.name;
-      if (item.key === this.props.activeKey) {
-        cls += ' active';
-      }
       return (
-        <div key={index}
+        <NavLink to={"/" + item.key}
+          key={index}
           className={cls}
+          activeClassName="active"
           onClick={() => this.changeTab(item)}>
           <div className="tab-icon"/>
           <div className="btn-name">{name}</div>
-        </div>
+        </NavLink>
       );
     });
   };
@@ -44,10 +42,6 @@ const mapStateToProps = state => ({
   activeKey: state.tab.activeKey
 });
 
-const mapDispatchToProps = dispatch => ({
-  changeTab(params) {
-    return dispatch(changeTab(params));
-  }
-});
+const mapDispatchToProps = dispatch => ({});
 
-export default connect(mapStateToProps, mapDispatchToProps)(BottomBar);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(BottomBar));

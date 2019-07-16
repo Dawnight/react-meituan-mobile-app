@@ -12,11 +12,6 @@ const defaultState = {
 
 export default (state = defaultState, action) => {
   switch (action.type) {
-  case Types.CHANGE_TAB:
-    return {
-      ...state,
-      activeKey: action.payload
-    };
   default:
     return {
       ...state

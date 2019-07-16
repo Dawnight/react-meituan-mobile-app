@@ -10,10 +10,12 @@ import history from './history';
 const store = createStore(
   reducers(history),
   compose(
-    applyMiddleware(
-      thunk,
-      logger,
-      routerMiddleware(history)
+    composeWithDevTools(
+      applyMiddleware(
+        thunk,
+        logger,
+        routerMiddleware(history)
+      )
     )
   )
 );
