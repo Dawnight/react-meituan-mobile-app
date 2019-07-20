@@ -1,1 +1,3 @@
 export const CHANGE_TAB = 'HEADER/CHANGE_TAB';
+
+export const GET_FILTER_DATA = 'HEADER/GET_FILTER_DATA';

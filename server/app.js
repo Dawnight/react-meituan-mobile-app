@@ -64,6 +64,25 @@ app.get('/api/orderList', (req, res) => {
   res.json(digestlist);
 });
 
+app.get('/api/filterData', (req, res) => {
+  const filterObj = require('./data/Filter.json');
+  let data = filterObj.data;
+  let keys = ['activity_filter_list', 'category_filter_list', 'sort_type_list'];
+  keys.forEach(key => {
+    data[key].map(item => {
+      item.code = uuid();
+      if (item.sub_category_list) {
+        item.sub_category_list.map(i => {
+          i.code = uuid() + Math.random().toString(32);
+          return i;
+        });
+      }
+      return item;
+    });
+  });
+  res.json(data);
+});
+
 app.listen(PORT, err => {
   if (err) {
     console.log(err);

@@ -23,7 +23,8 @@ tabs[CATEGORY_KEY.filter] = {
 
 const defaultState = {
   tabs: tabs,
-  activeKey: CATEGORY_KEY.cate
+  activeKey: CATEGORY_KEY.cate,
+  filterData: []
 };
 
 export default (state = defaultState, action) => {
@@ -32,6 +33,11 @@ export default (state = defaultState, action) => {
     return {
       ...state,
       activeKey: action.payload
+    };
+  case Types.GET_FILTER_DATA:
+    return {
+      ...state,
+      filterData: action.payload
     };
   default:
     return {
